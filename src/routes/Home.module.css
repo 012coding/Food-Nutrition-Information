@@ -1,0 +1,43 @@
+.main {
+  width: 100%;
+  padding-top: 20%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)) ,url("../../main.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container {
+  height: 800px;
+  margin: auto;
+}
+
+.logoBox {
+  text-align: center;
+}
+
+.logo {
+  font-size: 70px;
+  font-weight: bold;
+  color: white;
+}
+
+.searchBox {
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  width: 60%;
+  height: 50px;
+  padding-left: 20px;
+  border: 0;
+  border-radius: 30px;
+}
+
+.searchBtn {
+  margin-left: 10px;
+  width: 50px;
+  border: 0;
+  border-radius: 30px;
+  background-color: white;
+}
