@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Home.module.css";
+import styles from "../css/Home.module.css";
 import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
@@ -7,7 +7,7 @@ const Home = () => {
     <div>
       <div className={styles.main}>
         <div className={styles.container}>
-          <Fade top>
+          <Fade>
             <div className={styles.logoBox}>
               <h1 className={styles.logo}>
                 모든 음식에 대한
@@ -18,7 +18,7 @@ const Home = () => {
         </div>
         <div className={styles.container}>
           <div className={styles.logoBox}>
-            <Fade top>
+            <Fade>
               <h1 className={styles.logo}>
                 검색 한번으로
                 <br /> 편리하게

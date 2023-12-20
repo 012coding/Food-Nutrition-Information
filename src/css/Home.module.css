@@ -1,14 +1,14 @@
 .main {
   width: 100%;
-  padding-top: 20%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)) ,url("../../main.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)) ,url("../asset/main.jpg");
   background-attachment: fixed;
   background-size: cover;
 }
 
 .container {
-  height: 800px;
+  height: 750px;
   margin: auto;
+  padding-top: 15%;
 }
 
 .logoBox {
