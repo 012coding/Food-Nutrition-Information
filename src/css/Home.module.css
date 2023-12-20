@@ -1,6 +1,6 @@
 .main {
   width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)) ,url("../asset/main.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)) ,url("../assets/main.jpg");
   background-attachment: fixed;
   background-size: cover;
 }
