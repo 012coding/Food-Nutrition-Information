@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import styles from "../css/RecipePage.module.css";
-import Navbar from "../components/Navbar";
 import Recipes from "./Recipes";
 
 function Recipe() {
@@ -8,6 +7,15 @@ function Recipe() {
   const [recipe, setRecipe] = useState([]);
   const [search, setSearch] = useState("");
   const [searchResult, setSearchResult] = useState([]);
+  const [btn, setBtn] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    true,
+  ]);
   const foodKind = ["반찬", "국&찌개", "후식", "일품", "밥", "기타"];
 
   const RECIPE_API_KEY = "e27e020b4d7a4156a2c8";
@@ -31,13 +39,25 @@ function Recipe() {
     setSearchResult(recipe);
   };
 
+  // 필터 active효과
+  const activeAll = () => {
+    let temp = [false, false, false, false, false, false, false];
+    temp[6] = true;
+    setBtn(temp);
+  };
+
+  const activeItem = (idx) => {
+    let temp = [false, false, false, false, false, false, false];
+    temp[idx] = true;
+    setBtn(temp);
+  };
+
   // 종류별로 검색하기
   const goToKind = (kind) => {
-    const kindRecipe = recipe.filter((item) => item.kind === kind)
+    const kindRecipe = recipe.filter((item) => item.kind === kind);
 
-    setSearchResult(kindRecipe)
-  }
-
+    setSearchResult(kindRecipe);
+  };
 
   // api 호출후 데이터 저장
   useEffect(() => {
@@ -103,10 +123,9 @@ function Recipe() {
         setLoading(false);
       });
   }, []);
-  console.log(recipe)
+  console.log(recipe);
   return (
     <div>
-      <Navbar />
       <div className={styles.main}>
         {loading ? (
           <div className={styles.container}>
@@ -137,9 +156,24 @@ function Recipe() {
             </div>
 
             <div className={styles.kindBox}>
-              <div onClick={goToAll} className={styles.kindItem}>ALL</div>
+              <div
+                onClick={() => {
+                  goToAll();
+                  activeAll();
+                }}
+                className={btn[6] ? styles.kindItemActive : styles.kindItem}
+              >
+                ALL
+              </div>
               {foodKind.map((item, idx) => (
-                <div key={idx} onClick={() => goToKind(item)} className={styles.kindItem}>
+                <div
+                  key={idx}
+                  onClick={() => {
+                    goToKind(item);
+                    activeItem(idx);
+                  }}
+                  className={btn[idx] ? styles.kindItemActive : styles.kindItem}
+                >
                   {item}
                 </div>
               ))}

@@ -29,3 +29,13 @@
   text-underline-position: under;
   transition: 1s;
 }
+
+.navBtnActive {
+  font-family: "MapleRegular";
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  font-size: 10px;
+  text-decoration: underline;
+  text-underline-position: under;
+}

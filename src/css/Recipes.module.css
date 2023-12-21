@@ -1,12 +1,12 @@
 .back {
   width: 90%;
   margin: auto;
-  border-radius: 30px;
+  border-radius: 10px;
   background-color: white;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .item {

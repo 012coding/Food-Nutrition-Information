@@ -1,12 +1,10 @@
 import React from "react";
 import styles from "../css/Home.module.css";
 import { Fade } from "react-awesome-reveal";
-import Navbar from "../components/Navbar";
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
       <div className={styles.container}>
         <Fade>
           <div className={styles.logoBox}>

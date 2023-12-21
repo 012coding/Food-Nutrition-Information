@@ -4,11 +4,13 @@ import Home from "./routes/Home";
 import RecipePage from "./routes/RecipePage";
 import RecipeDetail from "./routes/RecipeDetail";
 import Nutrient from "./routes/Nutrient";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className={styles.home}>
       <Router>
+          <Navbar />
         <Routes>
           <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
           <Route
