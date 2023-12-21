@@ -1,0 +1,31 @@
+.nav {
+  display: flex;
+  width: 90%;
+  height: 50px;
+  margin: auto;
+  padding-top: 1%;
+  justify-content: space-between;
+}
+
+.navLogo {
+  width: 30%;
+  margin-top: -40px;
+}
+
+.navList {
+  display: flex;
+}
+
+.navBtn {
+  font-family: "MapleRegular";
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  font-size: 10px;
+}
+
+.navBtn:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+  transition: 1s;
+}

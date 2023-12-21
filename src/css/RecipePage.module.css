@@ -2,9 +2,6 @@
   width: 100%;
   padding-top: 3%;
   padding-bottom: 5%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("../assets/main.jpg");
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 .container {
@@ -43,7 +40,12 @@
 }
 
 .search {
-  width: 700px;
+  @media screen and (min-width: 512px) and (max-width: 1024px) {
+    width: 300px;
+  }
+  @media screen and (min-width: 1025px) {
+    width: 700px;
+  }
   height: 50px;
   margin-top: 10px;
   margin-left: 150px;
@@ -66,20 +68,24 @@
   display: flex;
   margin: 0 auto;
   width: 80%;
-  justify-content: space-around;
   margin-bottom: 50px;
 }
 
 .kindItem {
   width: 100px;
-  height: 100px;
-  font-size: 25px;
-  font-weight: bold;
-  border: 0;
+  height: 50px;
+  font-size: 20px;
+  margin: 0 10px;
   background-color: white;
+  opacity: 0.8;
   border-radius: 60px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.kindItem:hover {
+  transform: scale(1.2);
+  transition: all 0.15s linear;
 }

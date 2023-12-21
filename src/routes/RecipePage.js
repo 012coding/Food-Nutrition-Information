@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "../css/RecipePage.module.css";
+import Navbar from "../components/Navbar";
 import Recipes from "./Recipes";
 
 function Recipe() {
@@ -105,6 +106,7 @@ function Recipe() {
   console.log(recipe)
   return (
     <div>
+      <Navbar />
       <div className={styles.main}>
         {loading ? (
           <div className={styles.container}>
