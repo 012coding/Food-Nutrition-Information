@@ -27,7 +27,6 @@
 .navBtn:hover {
   text-decoration: underline;
   text-underline-position: under;
-  transition: 1s;
 }
 
 .navBtnActive {

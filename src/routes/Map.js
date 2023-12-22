@@ -90,7 +90,7 @@ function LandingPage() {
   };
 
   return (
-    <>
+    <div className={styles.main}>
       <form className={styles.inputForm} onSubmit={handleSubmit}>
         <input
           placeholder="메뉴를 입력하세요!"
@@ -111,7 +111,7 @@ function LandingPage() {
         ))}
       </div>
       <MapContainer searchPlace={Place} />
-    </>
+    </div>
   );
 }
 
