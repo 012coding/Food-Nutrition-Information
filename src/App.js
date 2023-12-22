@@ -3,14 +3,14 @@ import styles from "./css/App.module.css";
 import Home from "./routes/Home";
 import RecipePage from "./routes/RecipePage";
 import RecipeDetail from "./routes/RecipeDetail";
-import Nutrient from "./routes/Nutrient";
+import Map from "./routes/Map";
 import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className={styles.home}>
       <Router>
-          <Navbar />
+        <Navbar />
         <Routes>
           <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
           <Route
@@ -22,8 +22,8 @@ function App() {
             element={<RecipeDetail />}
           />
           <Route
-            path={`${process.env.PUBLIC_URL}/nutrient`}
-            element={<Nutrient />}
+            path={`${process.env.PUBLIC_URL}/map`}
+            element={<Map />}
           />
         </Routes>
       </Router>

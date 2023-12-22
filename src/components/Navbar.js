@@ -34,10 +34,10 @@ const Navbar = () => {
         </Link>
         <Link
           onClick={() => activeBtn(1)}
-          to={"/nutrient"}
+          to={"/map"}
           className={btn[1] ? styles.navBtnActive : styles.navBtn}
         >
-          <h1>영양 성분</h1>
+          <h1>맛집 검색</h1>
         </Link>
       </div>
     </div>
