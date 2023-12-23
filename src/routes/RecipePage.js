@@ -18,7 +18,7 @@ function Recipe() {
   ]);
   const foodKind = ["반찬", "국&찌개", "후식", "일품", "밥", "기타"];
 
-  const RECIPE_API_KEY = "";
+  const RECIPE_API_KEY = " ";
 
   const onChange = (event) => {
     setSearch(event.target.value);
